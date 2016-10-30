@@ -1,0 +1,19 @@
+{
+  "name": "scp",
+  "version": "0.0.1",
+  "description": "Secure, Contain, Protect",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "secure",
+    "contain",
+    "protect"
+  ],
+  "author": "Craig Buchanan",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  }
+}
