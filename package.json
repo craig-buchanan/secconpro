@@ -15,5 +15,9 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "dateformat": "^1.0.12",
+    "express": "^4.14.0"
   }
 }

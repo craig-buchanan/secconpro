@@ -1,0 +1,116 @@
+@charset "utf-8"
+
+@import url('font-bauhaus.css')
+@import url('nanumgothic.css')
+@import url('nanumgothiccoding.css')
+@import url('font-awesome.min.css')
+
+base-font-size = 18px
+large-font-size = 36px
+
+body
+	background-color #DDD
+	font-size base-font-size
+	color #333
+	padding 0
+	margin 0
+	font-family verdana, arial, helvetica, sans-serif
+
+.header
+	background url(body_bg.png) top left repeat-x
+	height 140px
+	margin 0
+	padding 0
+	padding-bottom 22px
+	position relative
+	z-index 10
+
+	.logo
+		display inline-block
+		height 100px
+		width 80px
+		position relative
+		z-index 10
+		background url(logo.png) no-repeat
+		background-size contain
+		float left
+		margin 50px 0 0 50px
+
+	.title
+		display inline-block
+		floatleft
+		padding-left 5px
+		margin-top 50px
+
+	h1
+		margin 0
+		color #eee
+		background transparent
+		font-family BauhausLTDemi, 'Nanum Gothic', Arial, sans-serif
+		font-size 2em
+		text-decoration none
+		text-shadow 3px 3px 5px #000
+		letter-spacing 0.9px
+
+	h2
+		padding 0
+		font-size 100%
+		max-height 38px
+		letter-spacing 1px
+		font-family "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica
+
+		span
+			display block
+			margin 0
+			line-height 0px
+			max-height 0px
+			font-weight bold
+			color #f0f0c0
+			text-shadow 1px 1px 1px #000
+			text-shadow 1px 1px 1px rgba(0, 0, 0, .8)
+
+.main
+	padding 0
+	margin 0 auto
+	width 80%
+
+.classified
+	font-size 3em
+
+.strike
+	text-decoration line-through
+
+.scp-number
+	margin-top 20px
+	font-size 3em
+	color #901
+	padding-bottom 10px
+	border-bottom 1px solid #666
+	margin-bottom 10px
+
+.subtitle
+	font-weight bold
+
+figure
+	float right
+	width 50%
+	padding 0
+	margin 10px 0 0px 10px
+	border 1px solid black
+	margin-bottom 10px
+
+	img
+		width 100%
+		vertical-align bottom
+
+	figcaption
+		background-color #999
+		font-size 1em
+		margin 0
+		padding 5px
+
+.redacted, .redacted::selection
+	background-color black
+	color black
+
+

@@ -1,49 +1,42 @@
 @charset "utf-8";
-
-@import url('font-bauhaus.css');
-@import url('nanumgothic.css');
-@import url('nanumgothiccoding.css');
-@import url('font-awesome.min.css');
-
+@import url("font-bauhaus.css");
+@import url("nanumgothic.css");
+@import url("nanumgothiccoding.css");
+@import url("font-awesome.min.css");
 body {
-	background-color: #DDD;
+	background-color: #ddd;
 	font-size: 1em;
 	color: #333;
 	padding: 0;
 	margin: 0;
-	font-family: verdana,arial,helvetica,sans-serif;
+	font-family: verdana, arial, helvetica, sans-serif;
 }
-
 .header {
-	background: url(body_bg.png) top left repeat-x;
+	background: url("body_bg.png") top left repeat-x;
 	height: 140px;
 	margin: 0;
 	padding: 0;
 	padding-bottom: 22px;
 	position: relative;
 	z-index: 10;
-
 }
-
 .header .logo {
 	display: inline-block;
 	height: 100px;
 	width: 80px;
 	position: relative;
 	z-index: 10;
-	background: url(logo.png) no-repeat;
+	background: url("logo.png") no-repeat;
 	background-size: contain;
-	float:left;
+	float: left;
 	margin: 50px 0 0 50px;
 }
-
 .header .title {
 	display: inline-block;
-	float:left;
+	float: left;
 	padding-left: 5px;
 	margin-top: 50px;
 }
-
 .header h1 {
 	margin: 0;
 	color: #eee;
@@ -54,7 +47,6 @@ body {
 	text-shadow: 3px 3px 5px #000;
 	letter-spacing: 0.9px;
 }
-
 .header h2 {
 	padding: 0;
 	font-size: 100%;
@@ -62,7 +54,6 @@ body {
 	letter-spacing: 1px;
 	font-family: "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica;
 }
-
 .header h2 span {
 	display: block;
 	margin: 0;
@@ -71,64 +62,51 @@ body {
 	font-weight: bold;
 	color: #f0f0c0;
 	text-shadow: 1px 1px 1px #000;
-	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 }
-
 .main {
 	padding: 0;
 	margin: 0 auto;
 	width: 80%;
-	font-size: .8em;
-}
-
-.main strong {
-	font-size: .9em;
-}
-
-.classified {
 	font-size: 2em;
 }
-
+.classified {
+	font-size: 3em;
+}
 .strike {
 	text-decoration: line-through;
 }
-
 .scp-number {
 	margin-top: 20px;
-	font-size: 2em;
+	font-size: 3em;
 	color: #901;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #666;
 	margin-bottom: 10px;
 }
-
 .subtitle {
 	font-weight: bold;
 }
-
 .content figure {
 	float: right;
 	width: 50%;
 	padding: 0;
 	margin: 10px 0 0px 10px;
-	border: 1px solid black;
+	border: 1px solid #000;
 	margin-bottom: 10px;
 }
-
 .content figure img {
 	width: 100%;
-	vertical-align:bottom;
+	vertical-align: bottom;
 }
-
 figcaption {
 	background-color: #999;
-	font-size: .8em;
+	font-size: 1em;
 	margin: 0;
 	padding: 5px;
 }
-
-.redacted, .redacted::selection {
-	background-color: black;
-	color: black;
+.redacted,
+.redacted::selection {
+	background-color: #000;
+	color: #000;
 }
-
