@@ -1,51 +1,78 @@
 <!doctype html>
 <html lang="de">
 <head>
-	<meta charset="UTF-8">
-	<title>SCP-814</title>
-	<link rel="stylesheet" type="text/css" href="/assets/styles.css"/>
-</head>
-<body>
-<div class="header">
-	<div class="logo"></div>
-	<div class="title">
+    <meta charset="UTF-8">
+    <title>SCP-814</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css"/>
+    <style>
+        .counter {
+            font-size: 80pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+            flex-grow: 3
+        }
 
-		<h1>SCP Foundation</h1>
-		<h2><span>Secure, Contain, Protect</span></h2>
-	</div>
+        .counter-split {
+            flex-grow: 1
+        }
+
+        .last {
+
+        }
+    </style>
+    <script>
+        const t = new Date(2018, 9, 31, 18, 0, 0).getTime();
+        //var diff = 1002 * 3600 - 1;
+
+        secs = v => v % 60;
+        minSecs = v => (v - secs(v)) % 3600;
+        mins = v => minSecs(v) / 60;
+        hourSecs = v => (v - minSecs(v) - secs(v)) % 86400;
+        hours = v => hourSecs(v) / 3600;
+        days = v => (v - hourSecs(v) - minSecs(v) - secs(v)) / 86400;
+        doPad = v => ('0' + v).slice(-2);
+        function updateClock() {
+            diff = Math.floor((t - Date.now()) / 1000);
+            str = [doPad(days(diff)), doPad(hours(diff)), doPad(mins(diff)), doPad(secs(diff))].join('').split('').reverse();
+            for(x = 0; x < 8; x++) document.getElementById('f' + x).innerText = str.length <= x ? 0 : str[x];
+
+            setTimeout(updateClock, 1000);
+        }
+
+    </script>
+</head>
+<body onload="updateClock()">
+<div class="header">
+    <div class="logo"></div>
+    <div class="title">
+
+        <h1>SEV Stiftung</h1>
+        <h2><span>sichern, eindämmen, verteidigen</span></h2>
+    </div>
 </div>
 <div class="main container">
-	<div class="classified strike">CLASSIFIED</div>
-	<div class="classified">PROVISIONAL RESTRICTION</div>
-	<div class="scp-number">SCP - 814</div>
-	<div class="content">
-		<figure>
-			<img src="/assets/SCP-814.png" >
-			<figcaption>'eggs' left by SCP-814.</figcaption>
-		</figure>
-		<p>
-			<strong>Item #:</strong> SCP-814
-		</p>
-		<p>
-			<strong>Object Class:</strong> Euclid
-		</p>
-		<p><strong>WARNING:</strong>  Containment breach (Possible effect of <a href="SCP-173">SCP-173</a>).</p>
-		<p>
-			<strong>Special Containment Procedures:</strong> SCP-814 must be kept in a reflective room with a perpetual bombardment of stroboscopic lighthing.
-		</p>
-
-		<p>
-			Personnel entering containment area must wear blinkered glasses to close of peripheral vision and concentrate on keeping their eyes focused on the floor one or two meters in front of them.
-		</p>
-		<p>
-			<strong>Description:</strong> SCP-814 is a visual anomaly that appears as analog static or heat blur in one's peripheral vision.
-		</p>
-		<p>
-			Every 24 hours SCP-814 will leave a nest of egg-like objects on the floor of the containment facility.
-		</p>
-		<p>It is imperative that these 'eggs' are incinerated as quickly a possible otherwise they can explode releasing <span class="redacted">a sense of horror and despair</span> to all humans in a <span class="redacted">two thousand kilometer</span>	 radius.</p>
-	</div>
-
+    <div class="classified strike">CLASSIFIED</div>
+    <div class="classified">PROVISIONAL RESTRICTION</div>
+    <div class="scp-number">SEV - 1297</div>
+    <div class="content">
+        <div id="debug"></div>
+        <p><strong>Eindämmungsbruch Erwartet:</strong></p>
+        <div style="display: inline-flex; justify-content: space-evenly; width: 100%">
+            <span id="f7" class="counter">0</span>
+            <span id="f6" class="counter">0</span>
+            <span class="counter">:</span>
+            <span id="f5" class="counter">0</span>
+            <span id="f4" class="counter">0</span>
+            <span class="counter">:</span>
+            <span id="f3" class="counter">0</span>
+            <span id="f2" class="counter">0</span>
+            <span class="counter">:</span>
+            <span id="f1" class="counter">0</span>
+            <span id="f0" class="counter">0</span>
+        </div>
+    </div>
 </div>
 
 </body>
